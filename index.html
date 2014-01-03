@@ -7,7 +7,7 @@
 
 
 
-        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
         <script type="text/javascript" charset="utf-8" src="childbrowser.js"></script>
 
         <script type="text/javascript" charset="utf-8" src="js/lib/jquery-2.0.3.js"></script>
@@ -77,6 +77,7 @@
                                 }; // Here will will track the change in URL of ChildBrowser
                             },
                             function(data) {
+                                console.log(data.text);
                                 alert("ERROR: " + JSON.stringify(data));
                             }
                     );
