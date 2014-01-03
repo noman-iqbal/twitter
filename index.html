@@ -62,7 +62,9 @@
                                 var entry = JSON.parse(data.text);
                                 console.log("USERNAME: " + entry.screen_name);
                             }
-                    );
+                    ,function (data){
+                          console.log("ERROR: " + JSON.stringify(data));
+                    });
                 }
                 else {
                     // we have no data for save user
@@ -123,7 +125,8 @@
                                 oauth.setAccessToken([accessParams.oauth_token, accessParams.oauth_token_secret]);
 
                                 // Saving token of access in Local_Storage
-                                var entryaccessData = {};
+                                var accessData = {};
+                                
                                 accessData.accessTokenKey = accessParams.oauth_token;
                                 accessData.accessTokenSecret = accessParams.oauth_token_secret;
 
