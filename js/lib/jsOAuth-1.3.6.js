@@ -1,6 +1,6 @@
 /**
  *  @license
- *  jsOAuth version 1.3.6
+ *  jsOAuth version 1.3.7
  *  Copyright (c) 2010, 2011 Rob Griffiths (http://bytespider.eu)
  *  jsOAuth is freely distributable under the terms of an MIT-style license.
  */
@@ -760,7 +760,7 @@ exports.OAuth = (function (global) {
         }
 
         string = string + '';
-        var reserved_chars = /[ \r\n!*"'();:@&=+$,\/?%#\[\]<>{}|`^\\\u0080-\uffff]/,
+        var reserved_chars = /[ \t\r\n!*"'();:@&=+$,\/?%#\[\]<>{}|`^\\\u0080-\uffff]/,
             str_len = string.length, i, string_arr = string.split(''), c;
 
         for (i = 0; i < str_len; i++) {
