@@ -25,6 +25,17 @@
 
 
         <script type="text/javascript">
+
+
+        var oauth; // It Holds the oAuth data request
+        var requestParams; // Specific param related to request
+        var options = {
+            consumerKey: 'frn4R0Enjm8XMQsfrXfhLw', // YOUR Twitter CONSUMER_KEY
+            consumerSecret: 'O88xUGIco5FFgFOyN8Jb1icfPSfBkfSoNOsipeDZI9E', // YOUR Twitter CONSUMER_SECRET
+            callbackUrl: "http://noman.iserver.purelogics.info/twitter/callback.php"}; // YOU have to replace it on one more Place                    
+        var twitterKey = "twtrKey"; // This key is used for storing Information related 
+
+
         var onDeviceReady = function() {
             alert("app is ready");
         }
