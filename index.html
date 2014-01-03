@@ -61,6 +61,7 @@
                             function(data) {
                                 var entry = JSON.parse(data.text);
                                 console.log("USERNAME: " + entry.screen_name);
+                                  $('#twitter_info').html(JSON.stringify(entry));
                             }
                     ,function (data){
                           console.log("ERROR: " + JSON.stringify(data));
