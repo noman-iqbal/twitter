@@ -56,7 +56,7 @@
 
                     // javascript OAuth take care of everything for app we need to provide just the options
                     oauth = OAuth(options);
-                    oauth.get('https://api.twitter.com/1/account/verify_credentials.json?skip_status=true',
+                    oauth.get('https://api.twitter.com/1.1/account/verify_credentials.json?skip_status=true',
                             function(data) {
                                 var entry = JSON.parse(data.text);
                                 console.log("USERNAME: " + entry.screen_name);
@@ -66,10 +66,10 @@
                 else {
                     // we have no data for save user
                     oauth = OAuth(options);
-                    oauth.get('https://api.twitter.com/1.1/oauth/request_token',
+                    oauth.get('https://api.twitter.com/oauth/request_token',
                             function(data) {
                                 requestParams = data.text;
-                                cb.showWebPage('https://api.twitter.com/1.1/oauth/authorize?' + data.text); // This opens the Twitter authorization / sign in page
+                                cb.showWebPage('https://api.twitter.com/oauth/authorize?' + data.text); // This opens the Twitter authorization / sign in page
                                 cb.onLocationChange = function(loc) {
                                     Twitter.success(loc);
 
