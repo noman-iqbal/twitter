@@ -16,10 +16,12 @@
 
     </head>
     <body onload="init()">
-        
-        
-        
-        <input type="submit" value="Login" />
+
+
+
+        <input type="submit" value="Twitter Login" />
+        <div
+            id="twitter_info"></div>
 
 
         <script type="text/javascript">
@@ -122,9 +124,9 @@
                                         function(data) {
                                             var entry = JSON.parse(data.text);
                                             console.log("TWITTER USER: " + entry.screen_name);
+                                            alert("TWITTER USER: " + entry.screen_name);
 //                                    $("#welcome").show();
 //                                    document.getElementById("welcome").innerHTML = "welcome " + entry.screen_name;
-                                            successfulLogin();
                                             // Just for eg.
 
                                         },
