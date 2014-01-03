@@ -40,6 +40,7 @@
             alert("app is ready");
         }
         function init() {
+           
             document.addEventListener("deviceready", onDeviceReady, false);
         }
         var Twitter = {
@@ -122,7 +123,7 @@
                                 oauth.setAccessToken([accessParams.oauth_token, accessParams.oauth_token_secret]);
 
                                 // Saving token of access in Local_Storage
-                                var accessData = {};
+                                var entryaccessData = {};
                                 accessData.accessTokenKey = accessParams.oauth_token;
                                 accessData.accessTokenSecret = accessParams.oauth_token_secret;
 
@@ -137,6 +138,8 @@
                                             var entry = JSON.parse(data.text);
                                             console.log("TWITTER USER: " + entry.screen_name);
                                             alert("TWITTER USER: " + entry.screen_name);
+                                             $('#twitter_info').html(JSON.stringify(entry));
+                                            
 //                                    $("#welcome").show();
 //                                    document.getElementById("welcome").innerHTML = "welcome " + entry.screen_name;
                                             // Just for eg.
